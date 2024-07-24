@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="in.scalive.beans.Laptop" id="lap">
+    </bean>
+    <bean class="in.scalive.beans.Desktop" id="des">
+    </bean>
+    <bean class= "in.scalive.beans.Programmer" id= "prog1">
+        <property name="name" value="Adil Qureshi"> </property>
+        <property name="comp" ref="lap"> </property>
+    </bean>
+    <bean class="in.scalive.beans.Programmer" id= "prog2">
+        <property name="comp" ref="des"> </property>
+        <property name="name" value="Ritu Patel"> </property>
+    </bean>
+</beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean class="in.scalive.beans.Employee" id="emp1">
+            <property name="empName" value="Adil Qureshi"> </property>
+            <property name="empId" value="101"> </property>
+        </bean>
+
+        <bean class="in.scalive.beans.Company" id="cmp">
+            <property name="compName" value="Amazon"> </property>
+            <property name="workers">
+                <array>
+                    <ref  bean="emp1"/>
+                    <bean class="in.scalive.beans.Employee">
+                        <property name="empName" value="Wasiq Khan"> </property>
+                        <property name="empId" value="102"> </property>
+                    </bean>
+                    <bean class="in.scalive.beans.Employee">
+                        <property name="empName" value="Mussu Khan"> </property>
+                        <property name="empId" value="103"> </property>
+                    </bean>
+                </array>
+            </property>
+        </bean>
+
+</beans>
